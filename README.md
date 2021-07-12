@@ -1,6 +1,6 @@
-# Date-Structures-Array's-Python
-This is a repository for all the problems I have solved regarding data structures linear and circular Arrays in python. This covers all the basics in manipulating r arrays.
-the array manipulation has been done in python but all the other data- structure coding has been done in java in a different "Data- Structures-Java repository.
+# Date Structures Array's and Signly Linked linkedlist Python
+This is a repository for all the problems I have solved regarding data structures linear and circular Arrays and singly linked linkedlist in python. This covers all the basics in manipulating arrays.
+the array and singly linked linkedlist manipulation has been done in python but all the other data- structure coding has been done in java in a different "Data- Structures-Java repository.
 this is a repository of all my assignments in CSE220(DATA STRUCTURES).
 THESE ARE THE TASKS DESCRIPTION:
 1. Shift Left k Cells
