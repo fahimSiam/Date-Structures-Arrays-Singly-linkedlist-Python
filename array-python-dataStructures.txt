@@ -1,0 +1,247 @@
+TASK 1:
+
+def shiftLeft(ar,n):
+        j=0
+        for i in range(n,len(ar)):
+                ar[j]=ar[i]
+                j+=1
+        for k in range(len(ar)-n,len(ar)-1):
+            ar[k]=0
+        return ar
+        
+        
+source=[10,20,30,40,50,60]
+a=3
+source=shiftLeft(source,a)
+for l in range(0,len(source)-a):
+    print(source[l])
+
+
+TASK 2: 
+
+def rotateLeft(ar,n):
+        j=0
+        ar1=[0]*len(ar)
+        for l in range(0,len(ar)):
+            ar1[l]=ar[l]
+        for i in range(n,len(ar)):
+            ar[j]=ar[i]
+            j+=1
+        l=0
+        for k in range(len(ar)-n,len(ar)):
+            ar[k]=ar1[l]
+            l+=1
+           
+        return ar
+        
+        
+source=[10,20,30,40,50,60]
+n=3
+source=rotateLeft(source,n)
+for l in range(0,len(source)):
+    print(source[l])
+
+
+
+TASK 3:
+
+def remove(ar,s,n):
+    j=n
+    for i in range(n+1,s):
+        ar[j]=ar[i]
+        j+=1
+    ar[s-1]=0
+    return ar
+        
+        
+source=[10,20,30,40,50,0,0]
+s=5
+n=2
+source=remove(source,s,n)
+for l in range(0,len(source)):
+    print(source[l])
+
+
+TASK 4:
+
+def removeAll(ar,s,n):
+    k=0
+    for a in range(0,s):
+        if(ar[a]==n):
+            j=a  
+            for i in range(j+1,s):
+                ar[j]=ar[i]
+                j+=1
+            k+=1
+        for l in range(s-k-1,s):
+            ar[l]=0
+    return ar
+
+
+source=[10,2,30,2,50,2,2,0,0]
+s=7
+n=2
+source=removeAll(source,s,n)
+for l in range(0,len(source)):
+    print(source[l])
+
+
+
+TASK 5:
+
+ar=[10, 3, 1, 2, 10]
+i=0;
+j=len(ar)-1
+left=ar[i]
+right=ar[j]
+while(i<j):
+    if(left>right):
+        right==right+ar[j-1]
+        j=-1
+    elif(right>left):
+        left==left+ar[i+1]
+        i=+1
+    else:
+        right==right+ar[j-1]
+        j=-1
+if(left==right):
+    print("true")
+else:
+    print('false')
+        
+    
+TASK6:
+
+
+def array(k):
+    ar=[0]*k*k
+    n=1
+    i=(k*k)-1
+    p=k
+    while(i>0):
+        if(n>k):
+            n=1
+            p-=1
+        if(n>p):
+            ar[i]=0
+        else:
+            ar[i]=n
+        n+=1
+        i-=1
+    return ar
+
+
+k=int(input("number"))
+ar=array(k)
+for l in range(0,len(ar)):
+    print(ar[l])
+
+
+
+TASK7:
+
+def bunch(ar):
+    max=0
+    i=0
+    
+    while(i<len(ar)):
+        temp=ar[i]
+        tempc=0
+        j=0
+        while(j<len(ar)):
+           
+           if(ar[j]==temp):
+               tempc=tempc+1
+           j=j+1
+        if(tempc>max):
+           max=tempc
+        i=i+1
+    
+    return max
+
+
+arr=[1, 2, 2, 3, 4,4, 4,4]
+print(bunch(arr))
+
+
+
+TASK8:
+
+def repitation(a):
+    doubleNum=0
+    arr=[]
+    a.sort()
+    prev=-9999
+    for i in a:
+        if prev!=i and a.count(i)>=2:
+            arr.append(a.count(i))
+            prev=i
+    # print(doubleNum)
+    for i in arr:
+        if arr.count(i)>=2:
+            return True
+        else:
+            return False
+
+a=[1,3,2,3,3,5,2,2]
+print(repitation(a))
+
+
+
+TASK9:
+
+
+def pal(ar,size,n):
+        j=0
+        ar1=[0]*len(ar)
+        for l in range(0,len(ar)):
+            ar1[l]=ar[l]
+        for i in range(n,len(ar)):
+            ar[j]=ar[i]
+            j+=1
+        l=0
+        for k in range(len(ar)-n,len(ar)):
+            ar[k]=ar1[l]
+            l+=1
+        s=0
+        e=size-1
+        while(s<e):
+            if(ar[s]!=ar[e]):
+                return False
+            s+=1
+            e=+1
+       
+        return True
+
+
+    
+a=[10,20,0,0,0,10,20,30]
+size=5
+n=5
+print(pal(a,size,n))
+
+
+
+TASK10:
+
+def compare(a1,a2,size1,size2,start1,start2):
+    c=0
+    max=0
+    for i in range(0,len(a1)):    
+        for j in range(0,len(a2)):
+            if(a1[i]==a2[j]):
+                c+=1
+        if(c>max):
+            max=c
+    return c
+
+a1=[10,20,0,0,0,10,20,30]
+size1=5
+start1=5
+a2=[30,20,0,0,0,10,20,30]
+size2=5
+start2=5
+print(compare(a1,a2,size1,size2,start1,start2))
+
+
+
